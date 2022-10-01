@@ -21,19 +21,27 @@ body{
     background-color: white;
 }
 
-.header img{
-    height: 20px;
-    width: 20px;
-    padding-top: 2px;
-}
-
 .header .top{
     display: grid;
     grid-template-columns: 5fr 1fr;
+    align-items: start;
 }
 
-.top img{
+.header img{    
+    height: 20px;
+    width: 20px;
     position: relative;
+}
+
+.top .head-left, .top .head-right{
+    display: flex;
+    padding-top: 20px;
+    font-size: large;
+    gap: 20px;
+}
+
+.top .head-left{
+    padding-left: 50px;
 }
 
 .top input[type=text]{
@@ -52,11 +60,22 @@ body{
     flex-direction: column;
     background-color: #5B7B7A;
     color: whitesmoke;
+    gap: 30px;
+}
+
+.navbar img{
+    height: 20px;
+    width: 20px;
+    padding-right: 10px;
 }
 
 .navbar > div{
     margin: 22px;
     margin-top: 42px;
+}
+
+.home, .settings{
+    font-size: large;
 }
 
 .dashboard{
@@ -128,9 +147,12 @@ body{
 .announce, .trending{
     background-color: white;
     border-radius: 12px;
+    padding-left: 20px;
+}
+
+.announce{
     display: grid;
     grid-template-rows:repeat(3, 1fr);
-    padding-left: 20px;
 }
 
 .announce header{
@@ -147,24 +169,32 @@ body{
     font-size: large;
 }
 
-.trending{
-    grid-template-columns: 1fr 4fr;
-}
-
 .trend-head{
     grid-row: 3 / 4;
 }
 
-.trending p{
-    grid-column: 2;
-
+.trending{
+    display: flex;
+    flex-direction: column;
 }
 
 .announce div:nth-child(1), .announce div:nth-child(2){
     border-bottom: 1px solid #3C887E;
 }
 
+.trending div{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
 
-header{
+}
 
+.trending img{
+    height: 40px;
+    width: 40px;
+    padding-right: 10px;
+    padding-top: 12px;
+}
+
+.trending span{
+    font-weight: bold;
 }
